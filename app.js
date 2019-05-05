@@ -19,7 +19,11 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/motorcycles", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:27017/motorcycles", { useNewUrlParser: true });
+
+// mongolab url: mongodb://<dbuser>:<dbpassword>@ds151586.mlab.com:51586/motodb
+mongoose.connect("mongodb://timbo:Skyer1.xxx@ds151586.mlab.com:51586/motodb", { useNewUrlParser: true });
+
 
 // PASSPORT SETUP
 // package imports for authentication
