@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<h1>Motorcycle Database</h1>
+
+<h3><%= foundMoto.brand %> <%= foundMoto.model %></h3>
+
+<img src="<%= foundMoto.imageurl %>">
+
+<h6>Submitted by: <%= foundMoto.author.username %></h6>
+
+<p><%= foundMoto.description %></p>
+
+<p><a class="btn btn-success" href="/motorcycles/<%= foundMoto._id %>/comments/new">Add New Comment</a></p>
+
+<% foundMoto.comments.forEach(function(comment){ %>
+<p><strong><%= comment.author.username %></strong></p>
+<p><%= comment.text %></p>
+    <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+        <a class="btn btn-xs btn-warning" href="/motorcycles/<%= foundMoto._id %>/comments/<%= comment._id %>/edit"  class="btn btn-primary" >Edit Comment</a>
+        <form action="/motorcycles/<%= foundMoto._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+            <input type="submit" class="btn btn-xs btn-danger" value="Delete Comment">   
+        </form>
+        <% } %>
+<% }); %>
+
+<% if(currentUser && foundMoto.author.id.equals(currentUser._id)){ %>
+    <a class="btn btn-xs btn-warning" href="/motorcycles/<%= foundMoto._id %>/edit"  class="btn btn-primary" >Edit Motorcycle</a>
+    <form action="/motorcycles/<%= foundMoto._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-xs btn-danger">Delete Motorcycle</button>
+    </form>
+<% } %>
+<% include ../partials/footer %>

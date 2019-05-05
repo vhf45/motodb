@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+
+<h1>Add new Motorcycle to the Database</h1>
+
+<form action="/motorcycles" method="POST">
+    <input name="brand" type="text" placeholder="brand">
+    <input name="model" type="text" placeholder="model">
+    <input name="imageurl" type="text" placeholder="image url">
+    <input name="description" type="text" placeholder="description">
+    <button>Submit!</button>
+</form>
+
+<% include ../partials/footer %>

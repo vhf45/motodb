@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+<h1>Motorcycle Database</h1>
+
+<h3>Edit Motorcycle: <%= editMoto.brand %> <%= editMoto.model %></h3>
+
+<form action="/motorcycles/<%= editMoto._id %>?_method=PUT" method="POST">
+    <input name="brand" type="text" value="<%= editMoto.brand %>">
+    <input name="model" type="text" value="<%= editMoto.model %>">
+    <input name="image" type="text" value="<%= editMoto.imageurl %>">
+    <input name="description" type="text" value="<%= editMoto.description %>">
+    <button>Submit!</button>
+</form>
+
+<% include ../partials/footer %>

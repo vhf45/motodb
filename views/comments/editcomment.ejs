@@ -1,0 +1,11 @@
+<% include ../partials/header %>
+
+<h1>Edit Comment</h1>
+
+<!-- motorcycle_id  used instead of motorcycle._id as we already have motorcycle._id in route name so don't need to query database again-->
+<form action="/motorcycles/<%= motorcycle_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+    <input name="comment[text]" type="text" value="<%= comment.text %>">
+    <button>Submit!</button>
+</form>
+
+<% include ../partials/footer %>
