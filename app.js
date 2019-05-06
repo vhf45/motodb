@@ -25,6 +25,9 @@ var mongoose = require("mongoose");
 //console.log(process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
+// backup connection 
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/motorcycles"
+mongoose.connect(url);
 
 // connection using mongolab
 // mongolab url: mongodb://<dbuser>:<dbpassword>@ds151586.mlab.com:51586/motodb
