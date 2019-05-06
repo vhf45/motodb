@@ -19,10 +19,16 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 
 var mongoose = require("mongoose");
+// connection whilst on hosting db on cloud9
 // mongoose.connect("mongodb://localhost:27017/motorcycles", { useNewUrlParser: true });
+// development database url
+//console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
+
+// connection using mongolab
 // mongolab url: mongodb://<dbuser>:<dbpassword>@ds151586.mlab.com:51586/motodb
-mongoose.connect("mongodb://timbo:Skyer1.xxx@ds151586.mlab.com:51586/motodb", { useNewUrlParser: true });
+// mongoose.connect("mongodb://timbo:Skyer1.xxx@ds151586.mlab.com:51586/motodb", { useNewUrlParser: true });
 
 
 // PASSPORT SETUP
