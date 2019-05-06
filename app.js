@@ -25,7 +25,7 @@ var mongoose = require("mongoose");
 //console.log(process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
-// backup connection 
+// backup connection if no environment variable available
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/motorcycles"
 mongoose.connect(url);
 
