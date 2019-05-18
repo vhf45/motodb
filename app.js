@@ -23,11 +23,12 @@ var mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost:27017/motorcycles", { useNewUrlParser: true });
 // development database url
 //console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+// mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
 // backup connection if no environment variable available
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/motorcycles"
-mongoose.connect(url);
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/motorcycles";
+// var url = "mongodb://localhost:27017/motorcycles"
+mongoose.connect(url, { useNewUrlParser: true });
 
 // connection using mongolab
 // mongolab url: mongodb://<dbuser>:<dbpassword>@ds151586.mlab.com:51586/motodb
