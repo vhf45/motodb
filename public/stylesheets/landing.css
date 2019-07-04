@@ -40,22 +40,22 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(../images/motorcycle_side_view_bike_120753_1920x1080.jpg); 
+  background-image: url(/images/motorcycle_side_view_bike_120753_1920x1080.jpg); 
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(../images/kawasaki_zx6-r_motorcycle_background_85648_1920x1080.jpg);
+  background-image: url(/images/kawasaki_zx6-r_motorcycle_background_85648_1920x1080.jpg);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(../images/the-5-best-starter-cruisers2.jpg);
+  background-image: url(/images/the-5-best-starter-cruisers2.jpg);
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(../images/the-5-best-starter-cruisers.jpg);
+  background-image: url(/images/the-5-best-starter-cruisers.jpg);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(../images/Top_5_Mods_For_Naked_Bikes_For_Touring_Hero.jpg);
+  background-image: url(/images/Top_5_Mods_For_Naked_Bikes_For_Touring_Hero.jpg);
   animation-delay: 40s; 
 }
 
