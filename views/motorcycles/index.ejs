@@ -4,18 +4,20 @@
 
 <a href="/motorcycles/new">Add New Motorcycle</a>
 
-<% motorcycles.forEach(function(moto){ %>
-    <div style="border: 2px solid black; margin: 2px">
-    <h4><%= moto.brand %></h4>
-    <h5><%= moto.model %></h5>
-    <img src="<%= moto.imageurl %>">
-    
-    <% var preview = moto.description %>
-    <p><%= preview.substring(0,50) %>...</p>
-    
-    <p><a href="/motorcycles/<%= moto._id %>"  class="btn btn-primary" >More Information</a></p>
-    <p><a href="/motorcycles/<%= moto._id %>/edit"  class="btn btn-primary" >Edit</a></p>
-    </div>
-<% }); %>
+<div class="container">
+    <% motorcycles.forEach(function(moto){ %>
+        <div class="item" style="border: 2px solid black; margin: 2px">
+            <h4><%= moto.brand %></h4>
+            <h5><%= moto.model %></h5>
+            <img src="<%= moto.imageurl %>">
+            
+            <% var preview = moto.description %>
+            <p><%= preview.substring(0,50) %>...</p>
+            
+            <p><a href="/motorcycles/<%= moto._id %>"  class="btn btn-primary" >More Information</a></p>
+            <p><a href="/motorcycles/<%= moto._id %>/edit"  class="btn btn-primary" >Edit</a></p>
+        </div>
+    <% }); %>
+</div>
 
 <% include ../partials/footer %>
