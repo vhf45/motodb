@@ -2,8 +2,6 @@
 
 Motorcycle Database Bootcamp Project
 
-Dynamic web app built using Node Express MongoDB/Mongoose and some incomplete Bootstrap styling.
+Dynamic web app built for a bootcamp using Node Express MongoDB/Mongoose and some (incomplete) Bootstrap styling.
 Implemented:
-  CRUD (Create, Read, Update, Delete) for database items
-  User Login
-  Comments
+  CRUD (Create, Read, Update, Delete) for database items, user login comments.
